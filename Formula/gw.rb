@@ -14,6 +14,7 @@ class Gw < Formula
   def install
     system "make", "prep"
     system "sed -i.bak 's/lglfw/lglfw3/g' Makefile && make"
+    system "cp -n .gw.ini ~/.gw.ini"
     bin.install "gw"
   end
 
