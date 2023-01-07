@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install kcleal/gw/gw`
+`brew install kcleal/homebrew-gw/gw`
 
-Or `brew tap kcleal/gw` and then `brew install gw`.
+Or `brew tap kcleal/homebrew-gw` and then `brew install gw`.
 
 ## Documentation
 
