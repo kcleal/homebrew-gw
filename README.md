@@ -2,9 +2,9 @@
 
 ## How do I install these formulae?
 
-`brew install kcleal/gw/<formula>`
+`brew install kcleal/gw/gw.rb`
 
-Or `brew tap kcleal/gw` and then `brew install <formula>`.
+Or `brew tap kcleal/gw` and then `brew install gw`.
 
 ## Documentation
 
