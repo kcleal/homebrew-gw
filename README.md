@@ -2,7 +2,7 @@
 
 ## How do I install these formulae?
 
-`brew install kcleal/gw/gw.rb`
+`brew install kcleal/gw/gw`
 
 Or `brew tap kcleal/gw` and then `brew install gw`.
 
