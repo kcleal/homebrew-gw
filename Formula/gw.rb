@@ -1,8 +1,8 @@
 class Gw < Formula
   desc "Browser for genomic sequencing data and variants"
   homepage "https://github.com/kcleal/gw"
-  url "https://github.com/kcleal/gw/archive/refs/tags/v0.3.1.tar.gz"
-  sha256 "b479e19c2fed0704a652c0fcbd653517ce01ac429ec7753c95a583c35a733012"
+  url "https://github.com/kcleal/gw/archive/refs/tags/v0.4.1.tar.gz"
+  sha256 "4df85f3725fa2a472fbeba417264492836cfab8854d572e5d2cfaaec5d8309a3"
   license "MIT"
   depends_on "fontconfig"
   depends_on "glfw"
@@ -13,7 +13,7 @@ class Gw < Formula
 
   def install
     system "make", "prep"
-    system "sed -i.bak 's/lglfw/lglfw3/g' Makefile && make"
+    system "make"
     system "cp -n .gw.ini ~/.gw.ini"
     bin.install "gw"
   end
