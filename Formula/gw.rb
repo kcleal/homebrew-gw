@@ -13,9 +13,8 @@ class Gw < Formula
 
   def install
     system "make", "prep"
-    system "export LIBRARY_PATH='$LIBRARY_PATH:$(brew --prefix)/lib'"
-    system "sed -i.bak 's/lglfw/lglfw3/g' Makefile"
-    system "LDFLAGS+='-L/opt/homebrew/lib' CPPFLAGS+='-I/opt/homebrew/include' make"
+    #system "sed -i.bak 's/lglfw/lglfw3/g' Makefile"
+    system "make"
     system "cp -n .gw.ini ~/.gw.ini"
     bin.install "gw"
   end
