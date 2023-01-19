@@ -14,8 +14,8 @@ class Gw < Formula
   def install
     system "make", "prep"
     system "make"
-    system "cp -n .gw.ini ~/.gw.ini"
     bin.install "gw"
+    bin.install ".gw.ini"
   end
 
   test do
