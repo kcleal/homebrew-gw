@@ -19,6 +19,6 @@ class Gw < Formula
   end
 
   test do
-    system "bin/gw" "--version"
+    system "bin/gw", "--version"
   end
 end
