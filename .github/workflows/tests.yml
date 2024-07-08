@@ -1,4 +1,4 @@
-name: brew test-bot
+name: "brew test-bot"
 on:
   push:
     branches:
@@ -11,11 +11,11 @@ jobs:
         os: [ubuntu-22.04, macos-12]
     runs-on: ${{ matrix.os }}
     steps:
-      - name: Set up Homebrew
+      - name: "Set up Homebrew"
         id: set-up-homebrew
         uses: Homebrew/actions/setup-homebrew@master
 
-      - name: Cache Homebrew Bundler RubyGems
+      - name: "Cache Homebrew Bundler RubyGems"
         id: cache
         uses: actions/cache@v4
         with:
@@ -23,22 +23,22 @@ jobs:
           key: ${{ runner.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ runner.os }}-rubygems-
 
-      - name: Install Homebrew Bundler RubyGems
+      - name: "Install Homebrew Bundler RubyGems"
         if: steps.cache.outputs.cache-hit != 'true'
-        run: brew install-bundler-gems
+        run: "brew install-bundler-gems"
 
-      - run: brew test-bot --only-cleanup-before
+      - run: "brew test-bot --only-cleanup-before"
 
-      - run: brew test-bot --only-setup
+      - run: "brew test-bot --only-setup"
 
-      - run: brew test-bot --only-tap-syntax
+      - run: "brew test-bot --only-tap-syntax"
 
-      - run: brew test-bot --only-formulae
+      - run: "brew test-bot --only-formulae"
         if: github.event_name == 'pull_request'
 
-      - name: Upload bottles as artifact
+      - name: "Upload bottles as artifact"
         if: always() && github.event_name == 'pull_request'
         uses: actions/upload-artifact@main
         with:
-          name: bottles
+          name: "bottles"
           path: '*.bottle.*'
