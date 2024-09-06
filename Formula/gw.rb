@@ -10,6 +10,9 @@ class Gw < Formula
   depends_on "icu4c"
   depends_on "wget"
   depends_on "zlib"
+  on_linux do
+    depends_on "wayland"
+  end
 
   def install
     system "make", "prep"
