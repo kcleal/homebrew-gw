@@ -16,7 +16,7 @@ class Gw < Formula
 
   def install
     system "make", "prep"
-    system "make" "-j3"
+    system "make"
     bin.install "gw"
     bin.install ".gw.ini"
   end
