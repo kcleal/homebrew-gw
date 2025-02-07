@@ -1,8 +1,8 @@
 class Gw < Formula
   desc "Browser for genomic sequencing data and variants"
   homepage "https://github.com/kcleal/gw"
-  url "https://github.com/kcleal/gw/archive/refs/tags/v1.1.3.tar.gz"
-  sha256 "ee042404c4cbb2f94c42c6ca926210b3e72a47120c2dfc4573bf4adc217931f1"
+  url "https://github.com/kcleal/gw/archive/refs/tags/v1.1.4.tar.gz"
+  sha256 "ceb439bdd699810d2b2b0e265c10956045a758de4e96c3a47149f83fc451b1cd"
   license "MIT"
   depends_on "fontconfig"
   depends_on "glfw"
